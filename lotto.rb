@@ -7,7 +7,7 @@ s = "test"
 
 prng = Random.new
 
-1000.times do
+10000.times do
     k = prng.rand(1..49)
     if numsA.select {|k,v| k.equal? k} then
         numsA[k] += 1
@@ -28,4 +28,4 @@ if true == true then
     puts "it is"
 end
 
-puts numsA
+puts numsA.values.sort
