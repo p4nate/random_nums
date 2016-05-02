@@ -5,6 +5,7 @@ $numsA = {1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0
 $runs = ARGV[0]
 $missed = Array.new
 $prng = Random.new
+Integer($runs)
 
 def getArg
     if $runs.nil? || $runs == 0 then
@@ -17,7 +18,7 @@ end
 
     
 
-def countm 
+def countm
     7.times do
         k = $prng.rand(1..49)
         if $numsA.select {|k,v| k.equal? k} then
@@ -30,7 +31,7 @@ end
 
 getArg
 
-100.times do
+10.times do
    countm
 end
 
